@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog</title>
+  <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+      .content-hidden {
+          display: none;
+      }
+  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/d7b7563d24.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles/portfolio.css" />
+</head>
+
+<body>
+  <header class="header">
+    <nav>
+      <h2 class="nav-title">
+        <a href="index.html"><span class="text-primary">Juba</span>yer</a>
+      </h2>
+      <ul>
+        <li><a href="./project.html">Projects</a></li>
+        <li><a class="blogs" href="blog.html">Blogs</a></li>
+        <li><button onclick="hire()" class="btn-primary">Hire</button></li>
+      </ul>
+    </nav>
+    <!-- header banner -->
+    <div class="banner">
+      <div>
+        <h3 class="banner-sub-title">Hi, I am</h3>
+        <h2 class="banner-title">Jubayer Al Mahmud</h2>
+        <p class="banner-description">
+          "Jubayer Al Mahmud | BSc in CSE Student at Green University of
+          Bangladesh | Aspiring Software Developer and Web Developer."
+        </p>
+        <a href="cv/Jubayer CV.pdf" download="./cv/Jubayer CV.pdf">
+          <button class="btn-primary">
+            <i class="fa-solid fa-download"></i> Download CV
+          </button>
+        </a>
+      </div>
+      <img class="banner-img" src="images/jubayer.png" alt="" />
+    </div>
+  </header>
+
+  <body class="bg-orange-50">
+
+      <section class="content p-4">
+        <h2 class="text-4xl text-center mb-8">Welcome to My Blog!</h2>
+        <div class="container mx-auto grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div class="blog-posts bg-white p-4 rounded shadow-md">
+                <h1 class="text-3xl mb-2">Web Development</h1>
+                <p class="text-justify content-preview">
+                    Web development is a broad term for the work involved in developing a website for the Internet or an intranet...
+                </p>
+                <p class="text-justify content-hidden hidden">
+                    Web development is a broad term for the work involved in developing a website for the Internet or an intranet. This can include web design, web content development, client-side/server-side scripting, and network security configuration.
+                </p>
+                <a href="#" class="text-blue-500 see-more">See more</a>
+            </div>
+            <div class="blog-posts bg-white p-4 rounded shadow-md">
+                <h1 class="text-3xl mb-2">DOS in Web Development</h1>
+                <p class="text-justify content-preview">
+                    DOS (Denial of Service) attacks in web development can severely impact the availability of web services...
+                </p>
+                <p class="text-justify content-hidden hidden">
+                    DOS (Denial of Service) attacks in web development can severely impact the availability of web services. These attacks flood a website with more traffic than it can handle, making it inaccessible to legitimate users.
+                </p>
+                <a href="#" class="text-blue-500 see-more">See more</a>
+            </div>
+            <div class="blog-posts bg-white p-4 rounded shadow-md">
+                <h1 class="text-3xl mb-2">JavaScript Frameworks</h1>
+                <p class="text-justify content-preview">
+                    JavaScript frameworks like React, Vue, and Angular are popular tools for building dynamic web applications...
+                </p>
+                <p class="text-justify content-hidden hidden">
+                    JavaScript frameworks like React, Vue, and Angular are popular tools for building dynamic web applications. These frameworks provide a structure for your code and come with a variety of built-in functionalities to help you create complex applications with ease.
+                </p>
+                <a href="#" class="text-blue-500 see-more">See more</a>
+            </div>
+            <!-- Add more blog posts as needed -->
+        </div>
+    </section>
+    
+    <!-- Modal Structure -->
+    <div id="modal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-6 rounded shadow-lg max-w-lg w-full">
+            <h1 class="text-3xl mb-4" id="modal-title">Modal Title</h1>
+            <p class="text-justify" id="modal-content">Modal Content</p>
+            <button class="mt-4 px-4 py-2 bg-blue-500 text-white rounded close-modal">Close</button>
+        </div>
+    </div>
+    
+    <script>
+        // JavaScript to handle modal functionality
+        document.querySelectorAll('.see-more').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const title = this.previousElementSibling.previousElementSibling.previousElementSibling.textContent;
+                const content = this.previousElementSibling.textContent;
+                document.getElementById('modal-title').textContent = title;
+                document.getElementById('modal-content').textContent = content;
+                document.getElementById('modal').classList.remove('hidden');
+            });
+        });
+    
+        document.querySelector('.close-modal').addEventListener('click', function() {
+            document.getElementById('modal').classList.add('hidden');
+        });
+    
+        document.getElementById('modal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                this.classList.add('hidden');
+            }
+        });
+    </script> 
+
+    <footer>
+      <div class="container">
+        <p class="text-center p-3">&copy; 2024 My Blog. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll('.see-more').forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          const contentPreview = this.previousElementSibling.previousElementSibling;
+          const contentFull = this.previousElementSibling;
+          if (contentFull.classList.contains('content-hidden')) {
+            contentFull.classList.remove('content-hidden');
+            contentPreview.classList.add('content-hidden');
+            this.textContent = 'See less';
+          } else {
+            contentFull.classList.add('content-hidden');
+            contentPreview.classList.remove('content-hidden');
+            this.textContent = 'See more';
+          }
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>
