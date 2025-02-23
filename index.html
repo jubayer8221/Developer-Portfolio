@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Developer Portfolio</title>
+    <link rel="icon" href="images/icons/favicon.ico" type="image/x-icon">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/d7b7563d24.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="styles/portfolio.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <nav>
+        <h2 class="nav-title">
+          <a href="index.html"><span class="text-primary">Juba</span>yer</a>
+        </h2>
+        <ul>
+          <li><a href="./project.html">Projects</a></li>
+          <li><a class="blogs" href="blog.html">Blogs</a></li>
+          <li><button onclick="hire()" class="btn-primary">Hire</button></li>
+        </ul>
+      </nav>
+      <!-- header banner -->
+      <div class="banner">
+        <div>
+          <h3 class="banner-sub-title">Hi, I am</h3>
+          <h2 class="banner-title">Jubayer Al Mahmud</h2>
+          <p class="banner-description">
+            "Jubayer Al Mahmud | BSc in CSE Student at Green University of
+            Bangladesh | Aspiring Software Developer and Web Developer."
+          </p>
+          <a href="cv/Jubayer CV.pdf" download="./cv/Jubayer CV.pdf">
+            <button class="btn-primary">
+              <i class="fa-solid fa-download"></i> Download CV
+            </button>
+          </a>
+        </div>
+        <img class="banner-img" src="images/jubayer.png" alt="" />
+      </div>
+    </header>
+
+    <main>
+      <section class="about">
+        <h3 class="section-title">About Me</h3>
+        <p class="section-description">
+          I am a designer and developer who loves web design. I enjoy making
+          simple, clean, and stylish websites that help users. Many clients have
+          seen great results working with me. I always deliver work on time and
+          within budget, meeting clients' needs and expectations.
+        </p>
+        <div class="about-info-container">
+          <div class="about-info">
+            <p class="info-title">Name:</p>
+            <p class="info-description">Jubayer Al Mahmud</p>
+          </div>
+          <div class="about-info">
+            <p class="info-title">Email:</p>
+            <p class="info-description">jubayer8221@gmail.com</p>
+          </div>
+          <div class="about-info">
+            <p class="info-title">Specialty:</p>
+            <p class="info-description">Web Dev</p>
+          </div>
+          <div class="about-info">
+            <p class="info-title">Location:</p>
+            <p class="info-description">Dhaka, BD</p>
+          </div>
+        </div>
+      </section>
+      <!-- what i do section -->
+      <section class="what-i-do">
+        <h3 class="section-title">What I Do?</h3>
+        <!-- .skills-container>.skill*4>img+p.skill-title+p.skill-description>lorem15 -->
+        <div class="skills-container">
+          <div class="skill">
+            <img src="images/icons/js.png" alt="" />
+            <p class="skill-title">Vanilla JavaScript</p>
+            <p class="skill-description">
+              Vanilla JavaScript refers to the use of plain JavaScript without
+              any libraries or frameworks. It is the core language of the web,
+              allowing you to create dynamic and interactive content on
+              websites.
+            </p>
+          </div>
+          <div class="skill">
+            <img src="images/icons/react.png" alt="" />
+            <p class="skill-title">React</p>
+            <p class="skill-description">
+              React is a popular JavaScript library for building user
+              interfaces, especially single-page applications. Developed by
+              Facebook, it allows developers to create reusable UI components,
+              making the development process more efficient and manageable.
+            </p>
+          </div>
+          <div class="skill">
+            <img src="images/icons/mongo.png" alt="" />
+            <p class="skill-title">Mongodb</p>
+            <p class="skill-description">
+              MongoDB is a NoSQL database known for its flexibility and
+              scalability. It stores data in a JSON-like format, which makes it
+              easy to work with and ideal for applications that need to handle
+              large amounts of unstructured data.
+            </p>
+          </div>
+          <div class="skill">
+            <img src="images/icons/nodejs.png" alt="" />
+            <p class="skill-title">Node JS</p>
+            <p class="skill-description">
+              Node.js is a runtime environment that allows you to run JavaScript
+              on the server side. It is known for its speed and efficiency,
+              making it a popular choice for building scalable network
+              applications.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resume Section -->
+      <section class="resume">
+        <h3 class="section-title">A summary of My Resume</h3>
+        <div class="resume-content">
+          <div>
+            <h3 class="resume-title">My Education</h3>
+            <div class="resume-item">
+              <h4 class="title">BSc in Computer Science and Engineering</h4>
+              <h5 class="sub-title">
+                Green University of Bangladesh / 2021 - 2025
+              </h5>
+              <p class="description">
+                List skill/technologies here. You can change the icon above to
+                any of the 1500+ FontAwesome 5 free icons available. Aenean
+                commodo ligula eget dolor.
+              </p>
+            </div>
+            <hr />
+            <div class="resume-item">
+              <h4 class="title">HSC</h4>
+              <h5 class="sub-title">Sherpur Govt. Collage / 2018 - 2019</h5>
+              <p class="description">
+                List skill/technologies here. You can change the icon above to
+                any of the 1500+ FontAwesome 5 free icons available. Aenean
+                commodo ligula eget dolor.
+              </p>
+            </div>
+            <hr />
+          </div>
+          <div>
+            <h3 class="resume-title">My Experience</h3>
+            <div class="resume-item">
+              <h4 class="title">Computer Oparetor</h4>
+              <h5 class="sub-title"> IIML, Dhaka - Bangladesh / 2022 - 2023</h5>
+              <p class="description">
+                List skill/technologies here. You can change the icon above to
+                any of the 1500+ FontAwesome 5 free icons available. Aenean
+                commodo ligula eget dolor.
+              </p>
+            </div>
+            <hr />
+            <div class="resume-item">
+              <h4 class="title">Student Counsilor and Accountent</h4>
+              <h5 class="sub-title"> Washington Imigration Consaltancy / 2023 - 2024</h5>
+              <p class="description">
+                List skill/technologies here. You can change the icon above to
+                any of the 1500+ FontAwesome 5 free icons available. Aenean
+                commodo ligula eget dolor.
+              </p>
+            </div>
+            <hr />
+          </div>
+        </div>
+        <div class="resume-button">
+          <a href="cv/Jubayer CV.pdf" download="./cv/Jubayer CV.pdf">
+            <button class="btn-primary">
+              <i class="fa-solid fa-download"></i> Download CV
+            </button>
+          </a>
+        </div>
+      </section>
+      <!-- contact section -->
+      <section class="contact">
+        <div>
+          <h3 class="section-title">Let's Connect</h3>
+          <p class="section-description">
+            Please fill out the form on this section to contact with me or call
+            between 9:00 A.M and 8.00 P.M ET, Monday through Friday.
+          </p>
+          <a href="">
+            <img src="images/icons/facebook.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/icons/twitter.png" alt="" />
+          </a>
+          <a href="">
+            <img src="images/icons/insta.png" alt="" />
+          </a>
+        </div>
+        <div>
+          <h3 class="section-title">Let’s Message me</h3>
+          <form action="">
+            <input type="text" name="" id="" placeholder="Your Name" />
+            <input type="email" name="" id="" placeholder="Your Email" />
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Message"
+            ></textarea>
+            <input class="btn-primary" type="submit" value="Submit" />
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- JavaScript to handle the download -->
+    <script>
+      function hire() {
+        window.location.href = "mailto:jubayer8221@gmail.com";
+      }
+    </script>
+  </body>
+</html>
